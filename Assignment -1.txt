@@ -1,0 +1,38 @@
+Linux Kernel Assignment : 
+
+1.Problem #1     Block System call : 
+
+
+>block system call for date command 
+>that means you don't have to uninstall date command but if you run kernel must not accept 
+>do the same Firefox as well
+
+2. Problem #2 :  play with directory 
+
+  >create a directory without name from command line
+  >create a directory with name "-okgoogle"
+
+
+for the 1st Problem i.e block system call i used two commands mainly 
+ 
+		1. which
+		2. chmod
+
+	for date i first ran: {which date} to know the location of file
+				than used sudo chmod -x /usr/bin/date (we need to use sudo command which means super user do as we need to change file permissions which require root permissions)
+	
+	then repeated the same procedure for firefox command now when we run any of the date or firefox we get result as permission denied.
+	
+	in the command chmod -x the {-x} part stands for removing executing permission from the file.
+
+
+for the second problem 
+
+the first part was to create a directory with empty string as name.
+		
+		for this i used mkdir ' ' command which executed without any errors.
+
+the second part was to create a directory with '-okgoogle' name while doing this i encountered an error which made me look into it and i found out that '-' means something else in terminal so had to use escape charater to pass '-' as a common string so my final command was 
+		mkdir ./-okgoogle this ran without any errors. 
+
+ 
